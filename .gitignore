@@ -12,3 +12,10 @@ node_modules/
 
 # Env
 *.env
+
+# direnv
+*.direnv/
+*.envrc
+
+# PyCharm
+.idea/
