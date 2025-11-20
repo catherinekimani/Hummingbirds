@@ -16,10 +16,10 @@ function NavBar() {
       </div>
 
       <div className="navbar-actions">
-        <button className="login-button">
+        <button className="nav-button login-button">
           LOGIN
         </button>
-        <button className="get-started-button">
+        <button className="nav-button get-started-button">
           GET STARTED
         </button>
       </div>
