@@ -15,13 +15,12 @@ function NavBar() {
          </a>
       </div>
 
-      {/* Right Side: Action Buttons */}
       <div className="navbar-actions">
-        <button className="nav-button login-button">
-          Login
+        <button className="login-button">
+          LOGIN
         </button>
-        <button className="nav-button get-started-button">
-          Get Started
+        <button className="get-started-button">
+          GET STARTED
         </button>
       </div>
     </nav>
