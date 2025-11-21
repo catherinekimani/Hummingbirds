@@ -1,0 +1,220 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.6;
+    background-color: #003220;
+}
+
+.hero-section {
+    background: linear-gradient(135deg,#d7e2d7 ,#6a916e); 
+    padding: 80px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70vh; 
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    
+    color: #003220; 
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-image{
+    max-width: 50%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.tree-img {
+    border-radius: 12px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%; 
+    height: auto;
+}
+
+.primary-button, .secondary-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 15px;
+}
+
+.primary-button {
+    background-color: #003220; 
+    color: white;
+    font-size: 1em;
+}
+
+.primary-button:hover {
+    background-color: #388e3c; 
+}
+
+.secondary-button {
+    background-color: transparent;
+    border: 2px solid #003220;
+    color: #003220;
+    font-size: 1em;
+}
+
+.secondary-button:hover {
+    background-color: #4CAF501a; 
+}
+
+.feature-section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.feature-section h2{
+    color: #ffffff;
+    font-size: 2em;
+}
+.featureCard h3{
+    color: #003220;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2em;
+    display: block;
+    margin-bottom: 10px;
+   
+}
+
+.how-it-works {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #f0f4f7; 
+}
+.how-it-works h2{
+font-size: 2em;
+}
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step-card {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    background-color: #dce4dc;
+    border-radius: 8px;
+    text-align: center;
+    
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #003220;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 5%; 
+    background-color: #003220; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+.navbar-logo a {  
+    text-decoration: none; 
+}
+
+.navbar-actions {
+    display: flex;
+    gap: 15px; 
+}
+
+.nav-button {
+    padding: 10px 20px;
+    border: 2px solid; 
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+
+.login-button {
+    background-color: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.login-button:hover {
+    background-color: #ffffff;
+    color: #003220;
+}
+
+
+.get-started-button {
+    background-color: #ffffff; 
+    border-color: #ffffff;
+    color: #003220;
+}
+
+.get-started-button:hover {
+    background-color: #003220; 
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.logo-img {
+    height: 200px; 
+    width: auto; 
+    display: block; 
+}
+
+.impact-stat{
+    margin-top: 30px;
+    font-size: 2em;
+}
