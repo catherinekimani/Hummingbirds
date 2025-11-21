@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import './SignupPage.css';
+
+
+
 
 function SignupPage() {
   const [accountType, setAccountType] = useState('individual');
@@ -6,9 +10,10 @@ function SignupPage() {
  
   const [formData, setFormData] = useState({
     email: '',
-    password: '',
-    confirmPassword: '',
-    organizationName: '', 
+    phonenumber: '',
+    organizationName: '',
+    description: '',
+    
   });
 
  
@@ -41,20 +46,20 @@ function SignupPage() {
 
   return (
     <div className="signup-page">
-      <h2>Create Your Account</h2>
+      <h2>SignUp</h2>
 
       <div className="account-type-selector">
         <button 
           className={accountType === 'individual' ? 'active' : ''}
           onClick={() => setAccountType('individual')}
         >
-          Individual (Student/Parent)
+          Individual 
         </button>
         <button 
           className={accountType === 'organization' ? 'active' : ''}
           onClick={() => setAccountType('organization')}
         >
-          Organization (Teacher/School)
+          Organization 
         </button>
       </div>
 
@@ -62,21 +67,38 @@ function SignupPage() {
         
        
         {accountType === 'organization' && (
-          <div className="form-group">
-            <label htmlFor="organizationName">Organization/School Name *</label>
-            <input
-              type="text"
-              id="organizationName"
-              name="organizationName"
-              value={formData.organizationName}
-              onChange={handleChange}
-              required
-              placeholder="E.g., Green Hills Elementary"
-            />
-          </div>
-        )}
+  <>
+    <div className="form-group">
+      <label htmlFor="organizationName">Organization/School Name *</label>
+      <input
+        type="text"
+        id="organizationName"
+        name="organizationName"
+        value={formData.organizationName || ''}
+        onChange={handleChange}
+        required
+        placeholder="E.g., Green Hills Elementary"
+      />
+    </div>
+
+    <div className="form-group">
+      <label htmlFor="description">Organization Description *</label>
+      <textarea
+        id="description"
+        name="description"
+        value={formData.description || ''}
+        onChange={handleChange}
+        required
+        placeholder="Briefly describe your organization..."
+      ></textarea>
+    </div>
+  </>
+)}
+
         
     
+        
+
         <div className="form-group">
           <label htmlFor="email">Email *</label>
           <input
@@ -91,33 +113,30 @@ function SignupPage() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="password">Password *</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
+          <label htmlFor="phone">Phone Number *</label>
+<input
+  type="tel"
+  id="phone"
+  name="phonenumber"
+  value={formData.phonenumber}
+  onChange={handleChange}
+  required
+  placeholder="e.g. +254712345678"
+/>
+
         </div>
         
-        <div className="form-group">
-          <label htmlFor="confirmPassword">Confirm Password *</label>
-          <input
-            type="password"
-            id="confirmPassword"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            required
-          />
-        </div>
 
         <button type="submit" className="primary-button signup-button">
-          {accountType === 'organization' ? 'Register School & Go to Dashboard' : 'Create Individual Account'}
+          {accountType === 'organization' ? 'Register Organization ' : 'Create Account'}
         </button>
       </form>
+      <div className='Login'>
+  <p>
+    Already have an account?{' '}
+    <span style={{ color: '#003220' }}>Login</span>
+  </p>
+</div>
     </div>
   );
 }
