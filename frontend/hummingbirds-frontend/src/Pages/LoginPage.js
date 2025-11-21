@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './SignupPage.css';
+import { Link } from 'react-router-dom';
+
 
 function LoginPage() {
   const [loginType, setLoginType] = useState('individual'); // individual, organization, student
@@ -142,9 +144,12 @@ function LoginPage() {
       </form>
 
       <div className="signup">
+        
         <p>
           Don't have an account?{' '}
-          <span style={{ color: '#003220', cursor: 'pointer' }}>SignUp</span>
+          <Link to="/signup" style={{ textDecoration: 'none' }}>
+          <span style={{ color: '#003220', cursor: 'pointer'}}>SignUp</span>
+        </Link>
         </p>
       </div>
     </div>
