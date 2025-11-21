@@ -80,5 +80,58 @@
 
 }
 
+.login-page {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.login-page h2{
+    color: #003220;
+    text-align: center;
+}
+
+.login-type-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.login-type-selector button {
+    flex: 1;
+    padding: 15px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-button {
+    width: 100%;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #003220;
+}
+
+.login-type-selector button.active {
+    background-color: #003220; 
+    color: white;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-type-selector button:hover:not(.active) {
+    background-color: #e0e0e0;
+}
 
 
+.signup{
+    margin-top: 10px;
+    font-size: 20px;
+
+}
