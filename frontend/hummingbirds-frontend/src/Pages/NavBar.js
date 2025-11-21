@@ -1,5 +1,6 @@
 import React from 'react';
 import logoimg from './HUMMINGBIRDS.png';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -19,9 +20,13 @@ function NavBar() {
         <button className="nav-button login-button">
           LOGIN
         </button>
-        <button className="nav-button get-started-button">
-          GET STARTED
-        </button>
+
+       <Link to="/signup">
+  <button className="nav-button get-started-button">
+    GET STARTED
+  </button>
+</Link>
+
       </div>
     </nav>
   );
