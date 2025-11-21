@@ -1,5 +1,6 @@
 import React from 'react';
 import treeimg from './tree.jpg'
+import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
@@ -9,9 +10,11 @@ function HeroSection() {
         <p>Hummingbirds is a platform to plant, track and earn rewards for real-world environmental action.</p>
         
         <div className="hero-cta">
+           <Link to="/signup">
           <button className="primary-button">
             Register Today
           </button>
+          </Link>
           <button className="secondary-button">
             How To Plant Better Trees
           </button>
