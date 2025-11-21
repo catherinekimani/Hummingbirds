@@ -94,10 +94,7 @@ function SignupPage() {
     </div>
   </>
 )}
-
-        
-    
-        
+  
 
         <div className="form-group">
           <label htmlFor="email">Email *</label>
