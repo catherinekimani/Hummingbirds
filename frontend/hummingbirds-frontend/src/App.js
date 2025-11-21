@@ -1,20 +1,29 @@
+// src/App.js - Handles Navigation Logic
 import React from 'react';
-import HeroSection from './Pages/HeroSection';
-import FeatureSection from './Pages/FeatureSection';
-import HowItWorks from './Pages/HowItWorks';
-import NavBar from './Pages/NavBar';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function HomePage() {
+
+import HomePage from './Pages/HomePage'; 
+import SignupPage from './Pages/SignupPage'; 
+import './App.css'; 
+
+function App() {
   return (
-    <div className="landing-page">
-      <NavBar />
-      <HeroSection /> 
-      <FeatureSection />
-      <HowItWorks />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+        
+          <Route path="/" element={<HomePage />} /> 
+          
+          
+          <Route path="/signup" element={<SignupPage />} /> 
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
-export default HomePage;
+export default App;
+
+
 
