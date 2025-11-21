@@ -141,10 +141,10 @@ function LoginPage() {
         </button>
       </form>
 
-      <div className="signup-link">
+      <div className="signup">
         <p>
           Don't have an account?{' '}
-          <span style={{ color: '#003220', cursor: 'pointer' }}>Sign Up</span>
+          <span style={{ color: '#003220', cursor: 'pointer' }}>SignUp</span>
         </p>
       </div>
     </div>
