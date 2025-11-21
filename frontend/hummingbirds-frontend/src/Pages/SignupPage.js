@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './SignupPage.css';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -131,7 +131,9 @@ function SignupPage() {
       <div className='Login'>
   <p>
     Already have an account?{' '}
+    <Link to="/login" style={{ textDecoration: 'none' }}>
     <span style={{ color: '#003220' }}>Login</span>
+    </Link>
   </p>
 </div>
     </div>
