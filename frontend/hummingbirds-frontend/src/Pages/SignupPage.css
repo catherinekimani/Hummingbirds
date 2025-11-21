@@ -1,0 +1,65 @@
+
+
+.signup-page {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.account-type-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Important for clean borders */
+}
+
+.account-type-selector button {
+    flex: 1;
+    padding: 15px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.account-type-selector button.active {
+    background-color: #4CAF50; /* Primary Green */
+    color: white;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.account-type-selector button:hover:not(.active) {
+    background-color: #e0e0e0;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+.signup-button {
+    width: 100%;
+    margin-top: 20px;
+}
