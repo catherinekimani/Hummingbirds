@@ -97,31 +97,19 @@ function SignupPage() {
   
 
         <div className="form-group">
-          <label htmlFor="email">Email *</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            placeholder="you@school.edu"
-          />
-        </div>
+    <label htmlFor="contact">Email / Phone Number *</label>
+    <input
+      type="text"
+      id="contact"
+      name="contact"
+      value={formData.contact}
+      onChange={handleChange}
+      required
+      placeholder="Enter email or phone number"
+    />
+  </div>
 
-        <div className="form-group">
-          <label htmlFor="phone">Phone Number *</label>
-<input
-  type="tel"
-  id="phone"
-  name="phonenumber"
-  value={formData.phonenumber}
-  onChange={handleChange}
-  required
-  placeholder="e.g. +254712345678"
-/>
-
-        </div>
+       
         
 
         <button type="submit" className="primary-button signup-button">
