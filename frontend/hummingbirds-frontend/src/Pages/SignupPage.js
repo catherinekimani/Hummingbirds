@@ -95,7 +95,37 @@ function SignupPage() {
   </>
 )}
   
+{accountType === 'individual' && (
+  <>
+    {/* FULL NAME */}
+    <div className="form-group">
+      <label htmlFor="fullName">Full Name *</label>
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        value={formData.fullName}
+        onChange={handleChange}
+        required
+        placeholder="Enter your full name"
+      />
+    </div>
 
+    {/* USERNAME */}
+    <div className="form-group">
+      <label htmlFor="username">Username *</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        value={formData.username}
+        onChange={handleChange}
+        required
+        placeholder="Enter a unique username"
+      />
+    </div>
+  </>
+)}
         <div className="form-group">
     <label htmlFor="contact">Email / Phone Number *</label>
     <input
