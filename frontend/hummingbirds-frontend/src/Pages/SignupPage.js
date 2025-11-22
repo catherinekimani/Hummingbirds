@@ -65,6 +65,7 @@ function SignupPage() {
 
       <form onSubmit={handleSubmit} className="signup-form">
         
+        {/* for organization */}
        
         {accountType === 'organization' && (
   <>
@@ -95,9 +96,10 @@ function SignupPage() {
   </>
 )}
   
+  {/* For individuals */}
 {accountType === 'individual' && (
   <>
-    {/* FULL NAME */}
+   
     <div className="form-group">
       <label htmlFor="fullName">Full Name *</label>
       <input
@@ -111,7 +113,6 @@ function SignupPage() {
       />
     </div>
 
-    {/* USERNAME */}
     <div className="form-group">
       <label htmlFor="username">Username *</label>
       <input
@@ -126,6 +127,8 @@ function SignupPage() {
     </div>
   </>
 )}
+
+{/* For all */}
         <div className="form-group">
     <label htmlFor="contact">Email / Phone Number *</label>
     <input
@@ -139,8 +142,6 @@ function SignupPage() {
     />
   </div>
 
-       
-        
 
         <button type="submit" className="primary-button signup-button">
           {accountType === 'organization' ? 'Register Organization ' : 'Create Account'}
