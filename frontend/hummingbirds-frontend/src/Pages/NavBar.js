@@ -1,6 +1,7 @@
 import React from 'react';
 import logoimg from './HUMMINGBIRD.png';
 import { Link } from 'react-router-dom';
+ import '../App.css';
 
 
 function NavBar() {
@@ -18,6 +19,7 @@ function NavBar() {
       </div>
 
       <div className="navbar-actions">
+
         <Link to="/login">
         <button className="nav-button login-button">
           LOGIN
