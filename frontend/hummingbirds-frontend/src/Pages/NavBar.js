@@ -1,6 +1,7 @@
 import React from 'react';
-import logoimg from './HUMMINGBIRDS.png';
+import logoimg from './HUMMINGBIRD.png';
 import { Link } from 'react-router-dom';
+
 
 function NavBar() {
   return (
