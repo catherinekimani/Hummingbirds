@@ -61,33 +61,68 @@ function LoginPage() {
       </div>
 
       <form onSubmit={handleSubmit} className="login-form">
-        {(loginType === 'individual' || loginType === 'organization') && (
+        {loginType === 'individual' && (
           <>
-            <div className="form-group">
-              <label htmlFor="email">Email *</label>
+
+<div className="form-group">
+      <label htmlFor="username">Username *</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        value={formData.username}
+        onChange={handleChange}
+        required
+        placeholder="Enter your username"
+      />
+    </div>
+
+          <div className="form-group">
+    <label htmlFor="contact">Email / Phone Number *</label>
+    <input
+      type="text"
+      id="contact"
+      name="contact"
+      value={formData.contact}
+      onChange={handleChange}
+      required
+      placeholder="Enter email or phone number"
+    />
+     </div>
+
+          </>
+
+        ) }
+        
+        
+       {loginType === 'organization' && (
+          <>
+             <div className="form-group">
+              <label htmlFor="organizationName">Organization/School Name *</label>
               <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
+                type="text"
+                id="organizationName"
+                name="organizationName"
+                value={formData.organizationName}
                 onChange={handleChange}
                 required
-                placeholder="you@example.com"
+                placeholder="E.g., Green Hills Elementary"
               />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="phonenumber">Phone Number *</label>
-              <input
-                type="tel"
-                id="phonenumber"
-                name="phonenumber"
-                value={formData.phonenumber}
-                onChange={handleChange}
-                required
-                placeholder="e.g. +254712345678"
-              />
-            </div>
+          <div className="form-group">
+          <label htmlFor="contact">Email / Phone Number *</label>
+          <input
+            type="text"
+            id="contact"
+            name="contact"
+            value={formData.contact}
+            onChange={handleChange}
+            required
+            placeholder="Enter email or phone number"
+          />
+        </div>
+            
           </>
         )}
 
@@ -107,17 +142,17 @@ function LoginPage() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="phonenumber">Phone Number *</label>
-              <input
-                type="tel"
-                id="phonenumber"
-                name="phonenumber"
-                value={formData.phonenumber}
-                onChange={handleChange}
-                required
-                placeholder="e.g. +254712345678"
-              />
-            </div>
+          <label htmlFor="contact">Email / Phone Number *</label>
+          <input
+            type="text"
+            id="contact"
+            name="contact"
+            value={formData.contact}
+            onChange={handleChange}
+            required
+            placeholder="Enter email or phone number"
+          />
+        </div>
 
             <div className="form-group">
               <label htmlFor="orgName">School / Organization Name *</label>
