@@ -64,7 +64,7 @@ function LoginPage() {
         {loginType === 'individual' && (
           <>
 
-<div className="form-group">
+      <div className="form-group">
       <label htmlFor="username">Username *</label>
       <input
         type="text"
@@ -77,7 +77,7 @@ function LoginPage() {
       />
     </div>
 
-          <div className="form-group">
+    <div className="form-group">
     <label htmlFor="contact">Email / Phone Number *</label>
     <input
       type="text"
@@ -89,8 +89,7 @@ function LoginPage() {
       placeholder="Enter email or phone number"
     />
      </div>
-
-          </>
+     </>
 
         ) }
         
