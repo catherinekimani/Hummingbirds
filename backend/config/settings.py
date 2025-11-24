@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     
     # applications
     'accounts',
-    'api',
 ]
 
 MIDDLEWARE = [
