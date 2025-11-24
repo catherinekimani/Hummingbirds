@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './Pages/HomePage'; 
 import SignupPage from './Pages/SignupPage'; 
 import LoginPage from './Pages/LoginPage';
+import Dashboard from "./Pages/Dashboard";
 import './App.css'; 
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
 
 
           <Route path="/login" element={<LoginPage />} /> 
+         
+         <Route path="/dashboard" element={<Dashboard />} />
+
         </Routes>
       </div>
     </Router>
