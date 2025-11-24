@@ -7,6 +7,8 @@ import HomePage from './Pages/HomePage';
 import SignupPage from './Pages/SignupPage'; 
 import LoginPage from './Pages/LoginPage';
 import Dashboard from "./Pages/Dashboard";
+import AdminDashboard from './Pages/AdminDashboard';
+
 import './App.css'; 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="/login" element={<LoginPage />} /> 
          
          <Route path="/dashboard" element={<Dashboard />} />
+
+         <Route path="/AdminDashboard" element={<AdminDashboard />} /> {/* organization */}
 
         </Routes>
       </div>
