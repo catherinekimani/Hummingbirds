@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './SignupPage.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 
 
 
@@ -16,6 +16,9 @@ function SignupPage() {
     
   });
 
+   const navigate = useNavigate();
+
+
  
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,22 +30,22 @@ function SignupPage() {
 
   //  form submission
   const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    // --- Validation and API Call Logic Goes Here ---
-    console.log('Account Type:', accountType);
-    console.log('Form Data:', formData);
-    
-    if (accountType === 'organization') {
-     
-      console.log(`Organization ${formData.organizationName} registering.`);
-     
-    } else {
-      
-      console.log('Individual registering.');
-      
-    }
-  };
+  e.preventDefault();
+
+  console.log('Account Type:', accountType);
+  console.log('Form Data:', formData);
+
+  // Here you can do API call / validation first
+  // After successful registration, redirect:
+
+  if (accountType === 'organization') {
+    console.log(`Organization ${formData.organizationName} registering.`);
+    navigate('/AdminDashboard'); // <-- redirect organization
+  } else {
+    console.log('Individual registering.');
+    navigate('/dashboard'); // <-- redirect individual
+  }
+};
 
   return (
     <div className="signup-page">
