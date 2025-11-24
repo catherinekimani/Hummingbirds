@@ -1617,3 +1617,10 @@
     font-size: 0.875rem;
   }
 }
+
+
+.logo-img {
+    height: 100px; 
+    width: auto; 
+    /* display: block;  */
+}
