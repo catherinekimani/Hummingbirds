@@ -1,6 +1,7 @@
 // src/Pages/Dashboard.js
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
+import logoimg from './HUMMINGBIRD.png';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -114,10 +115,16 @@ const Dashboard = () => {
         <div className="header-content">
           <div className="header-left">
             <div className="logo-section">
-              <span className="tree-icon">🌳</span>
+              {/* <span className="tree-icon">🌳</span> */}
+
               <div>
-                <h1>EcoTrack Kenya</h1>
-                <p className="subtitle">15 Billion Tree Programme</p>
+                        <img 
+                            src= {logoimg}
+                            alt="Tree Planting Logo" 
+                            className="logo-img"
+                          />
+                      
+                {/* <p className="subtitle">15 Billion Tree Programme</p> */}
               </div>
             </div>
           </div>
