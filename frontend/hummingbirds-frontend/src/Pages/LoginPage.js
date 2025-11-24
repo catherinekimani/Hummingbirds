@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './SignupPage.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 
 function LoginPage() {
@@ -12,6 +13,10 @@ function LoginPage() {
     admissionNumber: '',
   });
 
+  const navigate = useNavigate();
+
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -20,20 +25,24 @@ function LoginPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Login Type:', loginType);
-    console.log('Form Data:', formData);
+ const handleSubmit = (e) => {
+  e.preventDefault();
 
-    if (loginType === 'individual') {
-      console.log(`Logging in individual with email: ${formData.email}`);
-    } else if (loginType === 'organization') {
-      console.log(`Logging in organization with email: ${formData.email}`);
-    } else if (loginType === 'student') {
-      console.log(`Student logging in. Admission: ${formData.admissionNumber}, School: ${formData.orgName}`);
-    }
-    // TODO: call your API or check credentials here
-  };
+  console.log('Login Type:', loginType);
+  console.log('Form Data:', formData);
+
+ 
+
+  // Redirect based on loginType
+  if (loginType === 'organization') {
+    navigate('/AdminDashboard'); // organization dashboard
+  } else if (loginType === 'student') {
+    navigate('/dashboard'); // student can go to individual dashboard
+  } else {
+    navigate('/dashboard'); // individual dashboard
+  }
+};
+
 
   return (
     <div className="login-page">
