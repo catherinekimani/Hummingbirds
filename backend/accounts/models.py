@@ -1,9 +1,8 @@
 import uuid
-from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 from django.utils import timezone
-
+from django.conf import settings
 
 # Create your models here.
 class UserManager(BaseUserManager):
@@ -57,6 +56,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
     email = models.EmailField(unique=True, null=True, blank=True)
+    phone = models.TextField(unique=True, null=True, blank=True)
 
     full_name = models.TextField()
     display_name = models.TextField(null=True, blank=True)
@@ -336,3 +336,34 @@ class PointTransaction(models.Model):
     def __str__(self):
         return f"{self.user} - {self.points} points"
 
+class Donation(models.Model):
+    """
+    Tracks Paystack donations so we can verify/award points idempotently.
+    """
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="donations",
+        null=True, blank=True,
+    )
+
+    phone_number = models.CharField(max_length=32)
+    amount = models.IntegerField(help_text="Amount in major currency unit (e.g. KES/NGN).")
+
+    reference = models.CharField(max_length=100, unique=True)
+    status = models.CharField(max_length=32, default="initialized")  # initialized|success|failed
+    points_awarded = models.BooleanField(default=False)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "donations"
+        indexes = [
+            models.Index(fields=["phone_number"]),
+            models.Index(fields=["status"]),
+        ]
+
+    def __str__(self):
+        return f"{self.phone_number} {self.amount} ({self.reference})"
