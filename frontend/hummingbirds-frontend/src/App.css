@@ -1,5 +1,5 @@
 
-* {
+ *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -223,7 +223,63 @@ font-size: 2em;
     /* display: block;  */
 }
 
-.impact-stat{
+ .impact-stat{
     margin-top: 30px;
     font-size: 2em;
+}
+
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+        padding: 50px 5%;
+    }
+
+    .hero-content, .hero-image {
+        max-width: 100%; /* Take full width */
+        margin-bottom: 30px; /* Add space between stacked elements */
+    }
+
+    .features-container, .steps-container {
+        flex-direction: column; /* Stack feature/step cards vertically */
+    }
+
+    .feature-card, .step-card {
+        min-width: unset; /* Remove minimum width constraint */
+    }
+}
+
+/* Media Query for Mobile Phones  */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column; 
+        min-height: unset; 
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .navbar-logo {
+        margin-bottom: 15px;
+    }
+
+    .navbar-actions {
+        flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2em; /* Adjust large heading size */
+    }
+
+    .primary-button, .secondary-button {
+        display: block; /* Make buttons take full width for easier tapping */
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .impact-stat {
+        font-size: 1.5em; /* Adjust large font size */
+    }
 }
