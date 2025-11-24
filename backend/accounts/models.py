@@ -306,14 +306,6 @@ class PointTransaction(models.Model):
         related_name="point_transactions",
     )
 
-    organization = models.ForeignKey(
-        "organizations.Organization",
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="point_transactions"
-    )
-
     source_type = models.CharField(
         max_length=50,
     )
@@ -337,7 +329,6 @@ class PointTransaction(models.Model):
     class Meta:
         db_table = "point_transactions"
         indexes = [
-            models.Index(fields=["organization"]),
             models.Index(fields=["source_type", "source_id"]),
             models.Index(fields=["user"]),
         ]
