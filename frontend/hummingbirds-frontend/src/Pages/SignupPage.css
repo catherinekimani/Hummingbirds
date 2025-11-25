@@ -134,3 +134,35 @@
     font-size: 20px;
 
 }
+
+@media (max-width: 1024px) {
+    .auth-form-container {
+        max-width: 450px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .auth-form-container {
+        max-width: 90%; 
+        margin: 30px auto; 
+        padding: 20px;
+        box-shadow: none; 
+        border-radius: 0;
+    }
+
+    .auth-form-container h2 {
+        font-size: 1.5em; /* Shrink the heading */
+        margin-bottom: 20px;
+    }
+
+    .type-selector button {
+        padding: 12px 8px; 
+        font-size: 0.95em; 
+    }
+
+    .form-group input, 
+    .form-group textarea, 
+    .form-submit-button {
+        padding: 10px; /* Slightly reduce input and button height */
+    }
+}
